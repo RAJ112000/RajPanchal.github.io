@@ -62,6 +62,9 @@
     margin: 0 auto;
     text-align: left;
   }
+  img {
+  border-radius: 50%;
+ }
  .avatar {
    vertical-align: left;
    width: 15rem;
