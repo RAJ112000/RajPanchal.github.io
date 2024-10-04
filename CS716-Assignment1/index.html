@@ -1,1 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master of Science in Data Science | University of Regina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #154734;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            height: 60px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffcc33;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #154734;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            background-color: #ffda66;
+        }
+
+        .content {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #154734;
+        }
+
+        .program-description {
+            margin-bottom: 50px;
+        }
+
+        .program-description h2 {
+            font-size: 1.8rem;
+            color: #154734;
+        }
+
+        .program-features,
+        .program-unique {
+            margin-bottom: 50px;
+        }
+
+        .program-features ul,
+        .program-unique ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+
+        .program-features li,
+        .program-unique li {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .button-container a {
+            display: inline-block;
+            background-color: #154734;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+        }
+
+        .button-container a:hover {
+            background-color: #ffcc33;
+            color: #154734;
+        }
+
+        .subsection {
+            margin-bottom: 50px;
+        }
+
+        .subsection ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .subsection ul li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .subsection p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #154734;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        footer a {
+            color: #ffcc33;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-section {
+            margin-bottom: 50px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: #154734;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #154734;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .apply-now-section {
+            background-color: #ffcc33;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .apply-now-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #154734;
+        }
+
+        .apply-now-section a {
+            background-color: #154734;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .apply-now-section a:hover {
+            background-color: #003a28;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="icon.PNG" alt="University of Regina Logo">
+        <h1>Master of Science in Data Science</h1>
+        <p>Department of Computer Science | University of Regina</p>
+    </header>
+
+    <nav>
+        <a href="https://www.uregina.ca/">Home</a>
+        <a href="https://www.uregina.ca/admissions/graduate/index.html">Admissions</a>
+        <a href="https://www.uregina.ca/graduate-studies-research/programs/masters-programs.html">Master's Programs</a>
+        <a href="https://www.uregina.ca/graduate-studies-research/graduate-calendar/all-programs/computer-science.html">Computer Science</a>
+    </nav>
+
+    <div class="content">
+        <section class="program-description">
+            <h2>Program Overview</h2>
+            <p>
+                The Master of Science in Data Science program at the University of Regina offers a comprehensive curriculum designed to prepare students for the dynamic field of data science. With an interdisciplinary approach, the program integrates computer science, statistics, and data engineering, ensuring that graduates are ready to excel in a rapidly evolving industry.
+            </p>
+        </section>
+
+        <section class="program-features">
+            <h2 class="section-title">Key Features</h2>
+            <ul>
+                <li><strong>12-month intensive curriculum:</strong> The program focuses on advanced technologies like machine learning, AI, big data frameworks, and cloud computing, providing students with cutting-edge skills.</li>
+                <li><strong>Practicum experience:</strong> Gain hands-on experience through a nine-month practicum with top-tier industry partners.</li>
+                <li><strong>Boot Camp:</strong> The program starts with a boot camp covering essential concepts like probability, statistics, and programming in Python, to prepare students for the coursework.</li>
+                <li><strong>Data Engineering Concentration:</strong> The optional data engineering concentration adds an extra semester and focuses on data engineering skills, including pipeline design and big data technologies.</li>
+            </ul>
+        </section>
+
+        <section class="program-unique">
+            <h2 class="section-title">Unique Characteristics</h2>
+            <ul>
+                <li><strong>Strategic Location:</strong> The University of Regina, located in Saskatchewan's vibrant tech community, provides access to a range of internships and career opportunities in the data science field.</li>
+                <li><strong>Industry Collaborations:</strong> The program partners with leading tech companies, including AWS, Google Cloud, and Databricks, ensuring students work with industry-standard tools.</li>
+                <li><strong>Ethical Considerations:</strong> The curriculum emphasizes the social and ethical implications of data-driven decisions, preparing students for leadership roles with a strong ethical foundation.</li>
+                <li><strong>Faculty Expertise:</strong> Learn from renowned faculty who are actively engaged in cutting-edge research in machine learning, AI, and big data, providing students with insights into the latest trends.</li>
+            </ul>
+        </section>
+
+        <div class="button-container">
+            <a href="https://www.uregina.ca/">Explore University of Regina</a>
+            <a href="https://www.uregina.ca/graduate-studies-research/programs/masters-programs.html">View Graduate Programs</a>
+            <a href="https://www.uregina.ca/graduate-studies-research/graduate-calendar/all-programs/computer-science.html">Learn More about Computer Science</a>
+        </div>
+
+        <section class="subsection">
+            <h2 class="section-title">Career Prospects</h2>
+            <p>
+                Graduates of the Master of Science in Data Science program are equipped with the technical expertise and industry exposure needed to thrive in a range of fields, including:
+            </p>
+            <ul>
+                <li>Data Scientist</li>
+                <li>Machine Learning Engineer</li>
+                <li>Data Engineer</li>
+                <li>Business Intelligence Analyst</li>
+                <li>Data Analyst</li>
+            </ul>
+            <p>
+                Our graduates are highly sought after in industries such as finance, healthcare, and technology, with opportunities in both private and public sectors.
+            </p>
+        </section>
+
+        <section class="program-application">
+            <h2 class="section-title">Admission Requirements</h2>
+            <p>
+                The Master of Science in Data Science program at the University of Regina has the following admission requirements:
+            </p>
+            <ul>
+                <li>A Bachelor's degree in Computer Science, Engineering, or a related field.</li>
+                <li>A minimum GPA of 3.0 or equivalent from a recognized university.</li>
+                <li>Proficiency in programming languages such as Python or R.</li>
+                <li>Prior coursework in mathematics, statistics, or data analysis is recommended.</li>
+            </ul>
+            <p>
+                International students must meet English language proficiency requirements. Visit the <a href="https://www.uregina.ca/admissions/graduate/index.html">admissions page</a> for more details.
+            </p>
+        </section>
+
+        <section class="program-curriculum">
+            <h2 class="section-title">Program Curriculum</h2>
+            <p>
+                The curriculum for the Master of Science in Data Science includes core courses and electives that provide students with a strong foundation in data science and allow for specialization in areas such as:
+            </p>
+            <ul>
+                <li>Introduction to Machine Learning</li>
+                <li>Advanced Statistical Methods</li>
+                <li>Big Data and Cloud Computing</li>
+                <li>Data Visualization and Communication</li>
+                <li>Data Ethics and Governance</li>
+            </ul>
+            <p>
+                Students also have the opportunity to pursue elective courses in deep learning, natural language processing, and data engineering.
+            </p>
+        </section>
+
+        <section class="apply-now-section">
+            <h2>Ready to Apply?</h2>
+            <p>Start your journey to becoming a data science expert by applying to the University of Regina today.</p>
+            <a href="https://apply.uregina.ca/apply/">Apply Now</a>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-info">
+                <h3>Department of Computer Science</h3>
+                <p>University of Regina</p>
+                <p>3737 Wascana Parkway, Regina, SK S4S 0A2</p>
+                <p>Email: <a href="mailto:csdept@uregina.ca">csdept@uregina.ca</a></p>
+                <p>Phone: +1 (306) 585-4701</p>
+                <p>Website: <a href="https://www.uregina.ca/graduate-studies-research/graduate-calendar/all-programs/computer-science.html">Computer Science Department</a></p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 University of Regina - Department of Computer Science</p>
+        <p><a href="https://www.uregina.ca/">Visit University Website</a> | <a href="https://www.uregina.ca/admissions/graduate/index.html">Admissions</a> | <a href="https://www.uregina.ca/graduate-studies-research/programs/masters-programs.html">Programs</a></p>
+    </footer>
+</body>
+
+</html>
 
