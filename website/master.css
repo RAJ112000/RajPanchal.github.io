@@ -1,0 +1,201 @@
+/* Global Styles - Dark Theme */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e; /* Dark background for the whole website */
+    color: #f5f5f5; /* Light text for readability */
+    margin: 0;
+    padding-top: 80px; /* Account for the fixed navigation bar */
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s; /* Smooth theme change */
+}
+
+/* Navigation Bar - Dark Theme */
+nav {
+    background-color: #2a2a2a; /* Dark gray background */
+    padding: 10px 0;
+    position: fixed;
+    width: 110%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Strong shadow for emphasis */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #00bcd4; /* Teal blue for contrast */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 188, 212, 0.2); /* Light hover background */
+    transform: scale(1.1); /* Slight hover scale */
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #2a2a2a; /* Dark background */
+    color: #f5f5f5; /* Light text */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+header p {
+    font-size: 1.2em;
+    color: #bbb; /* Slightly lighter text for subheading */
+}
+
+header img.avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #00bcd4; /* Teal blue border */
+    transition: transform 0.3s;
+}
+
+header img.avatar:hover {
+    transform: rotate(360deg); /* Spin the avatar on hover */
+}
+
+/* Section Styles */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background-color: #2a2a2a; /* Dark background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Movement and fade */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Slight movement on hover */
+    opacity: 0.95; /* Subtle fade effect */
+}
+
+section h2 {
+    text-align: center;
+    color: #00bcd4; /* Accent color for section titles */
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+section p, section ul {
+    font-size: 1.1em;
+    color: #ccc; /* Light gray text */
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+section ul li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00bcd4; /* Accent color for list icons */
+    font-size: 1.2em;
+}
+
+/* Projects and Experience */
+.project-item, .experience-item {
+    margin-bottom: 30px;
+}
+
+.project-item h3, .experience-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+/* Contact Section */
+section#contact p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #00bcd4;
+}
+
+section#contact p a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section#contact p a:hover {
+    text-decoration: underline;
+    color: #fff; /* White text on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Hover and Disappearing Effects */
+section:hover {
+    transform: scale(1.02); /* Section grows slightly on hover */
+    opacity: 1; /* Fully visible on hover */
+}
+
+nav ul li a:hover {
+    color: #fff; /* White on hover for nav links */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+}
