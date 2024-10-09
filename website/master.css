@@ -1,201 +1,273 @@
-/* Global Styles - Dark Theme */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #1e1e1e; /* Dark background for the whole website */
-    color: #f5f5f5; /* Light text for readability */
-    margin: 0;
-    padding-top: 80px; /* Account for the fixed navigation bar */
-    line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s; /* Smooth theme change */
-}
-
-/* Navigation Bar - Dark Theme */
-nav {
-    background-color: #2a2a2a; /* Dark gray background */
-    padding: 10px 0;
-    position: fixed;
-    width: 110%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Strong shadow for emphasis */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav ul li {
-    margin: 0 20px;
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #fff;
 }
 
-nav ul li a {
-    color: #00bcd4; /* Teal blue for contrast */
+a {
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    color: inherit;
 }
 
-nav ul li a:hover {
-    background-color: rgba(0, 188, 212, 0.2); /* Light hover background */
-    transform: scale(1.1); /* Slight hover scale */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Header Section */
-header {
+/* Navigation Bar */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 999;
+    transition: background-color 0.3s ease;
+}
+
+nav.scrolled {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+nav .logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #333;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 30px;
+}
+
+nav .nav-links a {
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #007bff;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background-image: url('images/hero-bg.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
     text-align: center;
-    padding: 60px 0;
-    background-color: #2a2a2a; /* Dark background */
-    color: #f5f5f5; /* Light text */
+    position: relative;
+    flex-direction: column;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    transition: color 0.3s; /* Smooth color transition */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-header p {
-    font-size: 1.2em;
-    color: #bbb; /* Slightly lighter text for subheading */
+.hero-section .container {
+    position: relative;
+    z-index: 1;
 }
 
-header img.avatar {
-    border-radius: 50%;
+.hero-section .profile-image {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #00bcd4; /* Teal blue border */
-    transition: transform 0.3s;
+    border: 3px solid #fff;
+    margin-bottom: 20px;
 }
 
-header img.avatar:hover {
-    transform: rotate(360deg); /* Spin the avatar on hover */
+.hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    margin-bottom: 20px;
 }
 
-/* Section Styles */
+.hero-section .tagline {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero-section .social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.hero-section .social-links a:hover {
+    color: #007bff;
+}
+
+/* Sections */
 section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 40px 20px;
-    background-color: #2a2a2a; /* Dark background for sections */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Movement and fade */
-}
-
-section:hover {
-    transform: translateY(-5px); /* Slight movement on hover */
-    opacity: 0.95; /* Subtle fade effect */
+    padding: 80px 0;
 }
 
 section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
     text-align: center;
-    color: #00bcd4; /* Accent color for section titles */
+    margin-bottom: 50px;
+    color: #333;
+}
+
+section h3 {
+    font-size: 1.8em;
     margin-bottom: 20px;
-    font-size: 2em;
+    color: #333;
 }
 
 section p, section ul {
     font-size: 1.1em;
-    color: #ccc; /* Light gray text */
+    line-height: 1.8;
+    color: #555;
 }
 
 section ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 section ul li {
     position: relative;
-    padding-left: 20px;
+    padding-left: 25px;
     margin-bottom: 10px;
 }
 
-section ul li:before {
-    content: "✔";
+section ul li::before {
+    content: "\f058";
+    font-family: 'FontAwesome';
     position: absolute;
     left: 0;
-    color: #00bcd4; /* Accent color for list icons */
-    font-size: 1.2em;
+    color: #007bff;
+    font-size: 1em;
 }
 
-/* Projects and Experience */
-.project-item, .experience-item {
-    margin-bottom: 30px;
-}
-
-.project-item h3, .experience-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #f5f5f5;
+/* Experience and Education Items */
+.experience-item, .education-item, .project-item {
+    margin-bottom: 40px;
 }
 
 /* Contact Section */
-section#contact p {
+#contact p {
     text-align: center;
     font-size: 1.2em;
-    color: #00bcd4;
 }
 
-section#contact p a {
-    color: #00bcd4;
+#contact p a {
+    color: #007bff;
     text-decoration: none;
-    font-weight: bold;
 }
 
-section#contact p a:hover {
+#contact p a:hover {
     text-decoration: underline;
-    color: #fff; /* White text on hover */
 }
 
 /* Footer */
 footer {
-    background-color: #2a2a2a;
-    color: #f5f5f5;
-    text-align: center;
+    background-color: #f8f9fa;
     padding: 20px 0;
-    border-top: 1px solid #444;
 }
 
 footer p {
-    margin: 0;
-    font-size: 1em;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
 }
 
-/* Hover and Disappearing Effects */
-section:hover {
-    transform: scale(1.02); /* Section grows slightly on hover */
-    opacity: 1; /* Fully visible on hover */
+/* Animations and Transitions */
+nav, .hero-section, section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
 }
 
-nav ul li a:hover {
-    color: #fff; /* White on hover for nav links */
+nav {
+    animation-delay: 0s;
 }
 
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+.hero-section {
+    animation-delay: 0.2s;
+}
 
-    header h1 {
-        font-size: 2em;
-    }
+section {
+    animation-delay: 0.4s;
+}
 
-    section {
-        padding: 30px 15px;
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    section h2 {
-        font-size: 1.8em;
-    }
+}
+.hero-section .profile-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.hero-section .profile-image {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
