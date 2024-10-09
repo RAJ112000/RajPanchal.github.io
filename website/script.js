@@ -1,40 +1,36 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav ul li a').forEach(anchor => {
+// Sticky Navigation Bar
+window.addEventListener('scroll', function() {
+    const nav = document.getElementById('navbar');
+    if (window.pageYOffset > 0) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        if (this.hash !== "") {
+            e.preventDefault();
+            const hash = this.hash;
+            document.querySelector(hash).scrollIntoView({
+                behavior: 'smooth'
+            });
+            // Close the mobile menu after clicking
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        }
     });
 });
-
-// Adding a slight fade-in effect when scrolling sections into view
-const sections = document.querySelectorAll('section');
-const options = {
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('fade-in');
-        observer.unobserve(entry.target);
-    });
-}, options);
-
-sections.forEach(section => {
-    observer.observe(section);
-});
-
-// CSS for fade-in effect
-document.styleSheets[0].insertRule(`
-    .fade-in {
-        opacity: 1;
-        transform: translateY(0);
-        transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-    section {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-`, 0);
